@@ -63,7 +63,7 @@ var TabsPage = (function () {
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"c:\angular4\ionic3Demo\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"c:\angular4\ionic3Demo\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -98,7 +98,7 @@ var AboutPage = (function () {
     }
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"c:\angular4\ionic3Demo\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"c:\angular4\ionic3Demo\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/about/about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], AboutPage);
@@ -133,7 +133,7 @@ var ContactPage = (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"c:\angular4\ionic3Demo\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"c:\angular4\ionic3Demo\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/contact/contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], ContactPage);
@@ -168,7 +168,7 @@ var HomePage = (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"c:\angular4\ionic3Demo\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Ionic!</h2>\n  <p>\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  </p>\n  <p>\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n    update any existing page or create new pages.\n  </p>\n</ion-content>\n'/*ion-inline-end:"c:\angular4\ionic3Demo\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Ionic!</h2>\n  <p>\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  </p>\n  <p>\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n    update any existing page or create new pages.\n  </p>\n</ion-content>\n'/*ion-inline-end:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], HomePage);
@@ -199,15 +199,7 @@ var ImAreaService = (function () {
     function ImAreaService() {
         this.dialogs = [
             { me: 1, wts: 'Mr. Nice' },
-            { me: 2, wts: 'Narco' },
-            { me: 1, wts: 'Bombasto' },
-            { me: 2, wts: 'Celeritas' },
-            { me: 1, wts: 'Magneta' },
-            { me: 1, wts: 'RubberMan' },
-            { me: 2, wts: 'Dynama' },
-            { me: 1, wts: 'Dr IQ' },
-            { me: 2, wts: 'Magma' },
-            { me: 2, wts: 'Tornado' }
+            { me: 2, wts: 'Narco' }
         ];
     }
     ImAreaService.prototype.getDialogs = function () {
@@ -348,10 +340,22 @@ var MyApp = (function () {
             // Here you can do any higher level native things you might need.
             statusBar.styleDefault();
             splashScreen.hide();
+            try {
+                console.log("Init initPlatform Start!!");
+                marsChat.initPlatform({
+                    'userName': 'Marven',
+                    'host': '10.204.13.145'
+                }, function () {
+                    console.log("MarsPlatform ==>  Init Success !");
+                });
+            }
+            catch (error) {
+                console.log("Oooops MarsPlatform ==> Init error !" + error);
+            }
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"c:\angular4\ionic3Demo\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n<im-area></im-area>'/*ion-inline-end:"c:\angular4\ionic3Demo\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n<im-area></im-area>'/*ion-inline-end:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -388,12 +392,27 @@ var IHadSay = (function () {
 }());
 
 var ImArea = (function () {
-    function ImArea(imAreaService) {
+    function ImArea(imAreaService, cd) {
+        var _this = this;
         this.imAreaService = imAreaService;
+        this.cd = cd;
         this.mText = {
             me: 2,
             wts: ''
         };
+        this.successCallback = function (data) {
+            console.log("onMessageReceive Success ! ==> Content:" + data.msgcontent
+                + " Topic:" + data.msgtopic + " From:" + data.msgfrom);
+            if (data.msgcontent == undefined) {
+                return;
+            }
+            _this.dialogs = _this.dialogs.concat([{
+                    me: 1,
+                    wts: data.msgcontent
+                }]);
+            _this.cd.detectChanges();
+        };
+        marsChat.onMessageReceive(this.successCallback);
     }
     ImArea.prototype.ngOnInit = function () {
         this.getBeforeDialog();
@@ -410,15 +429,24 @@ var ImArea = (function () {
         }
         this.dialogs.push(tempText);
         this.mText.wts = '';
+        marsChat.sendTextMessage({
+            'to': 'all',
+            'text': tempText.wts,
+            'topic': '0'
+        }, function () {
+            console.log("sendTextMessage Success ! ==> ");
+        }, function () {
+            console.log("sendTextMessage Failed ! ==> ");
+        });
     };
     ImArea.prototype.getBeforeDialog = function () {
         this.dialogs = this.imAreaService.getDialogs();
     };
     ImArea = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'im-area',template:/*ion-inline-start:"c:\angular4\ionic3Demo\src\pages\implugin\im-area.html"*/'<div id="main-container" class="im-main-container">\n    <div id="dialog-area" class="im-dialog-area">\n        <div id="dialog-title" class="im-dialog-title">\n            <div id="target-name" class="im-target-name">\n                <div id="dialog-close" class="im-dialog-close">\n                    <img class="im-close-button" src="../../assets/imgs/close.png">\n                </div>\n                <span>Your Friend Miss IM</span>\n            </div>\n            <div id="title-button-area" class="im-title-button-area">\n                <button class="rkmd-btn btn-fab-mini btn-lightBlue ripple-effect im-email-icons">\n                </button>\n                <button class="rkmd-btn btn-fab-mini btn-cyan ripple-effect im-pen-icons">\n                </button>\n            </div>\n        </div>\n        <div id="dialog-target-head" class="im-dialog-target-head">\n        </div>\n        <div id="talk-area" class="im-talk-area">\n            <ul class="chat-thread">\n                <li [ngClass]="{\'left-li\': dialog.me === 1, \'right-li\': dialog.me === 2}" *ngFor="let dialog of dialogs">{{ dialog.wts }}</li>\n            </ul>\n        </div>\n        <div id="input-area" class="im-input-area">\n            <input class="im-input" [(ngModel)]="mText.wts"/>\n            <div class="demo">\n                <button id="im-input-button" class="rkmd-btn btn-xs btn-lightBlue ripple-effect" (click)="addWhatISay()">send</button>\n            </div>\n        </div>\n    </div>\n\n</div>\n\n'/*ion-inline-end:"c:\angular4\ionic3Demo\src\pages\implugin\im-area.html"*/
+            selector: 'im-area',template:/*ion-inline-start:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/implugin/im-area.html"*/'<div id="main-container" class="im-main-container">\n    <div id="dialog-area" class="im-dialog-area">\n        <div id="dialog-title" class="im-dialog-title">\n            <div id="target-name" class="im-target-name">\n                <div id="dialog-close" class="im-dialog-close">\n                    <img class="im-close-button" src="../assets/imgs/close.png">\n                </div>\n                <span>Your Friend Miss IM</span>\n            </div>\n            <div id="title-button-area" class="im-title-button-area">\n                <button class="rkmd-btn btn-fab-mini btn-lightBlue ripple-effect im-email-icons">\n                </button>\n                <button class="rkmd-btn btn-fab-mini btn-cyan ripple-effect im-pen-icons">\n                </button>\n            </div>\n        </div>\n        <div id="dialog-target-head" class="im-dialog-target-head">\n        </div>\n        <div id="talk-area" class="im-talk-area">\n            <ul class="chat-thread">\n                <li [ngClass]="{\'left-li\': dialog.me === 1, \'right-li\': dialog.me === 2}" *ngFor="let dialog of dialogs">{{ dialog.wts }}</li>\n            </ul>\n        </div>\n        <div id="input-area" class="im-input-area">\n            <input class="im-input" [(ngModel)]="mText.wts"/>\n            <div class="demo">\n                <button id="im-input-button" class="rkmd-btn btn-xs btn-lightBlue ripple-effect" (click)="addWhatISay()">send</button>\n            </div>\n        </div>\n    </div>\n\n</div>\n\n'/*ion-inline-end:"/Users/bo.e.liu/work/testproject/IM_IonicClient/src/pages/implugin/im-area.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]])
     ], ImArea);
     return ImArea;
 }());

@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
+declare var marsChat;
 
 @Component({
   templateUrl: 'app.html'
@@ -17,6 +18,19 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-    });
+
+      try {
+        console.log("Init initPlatform Start!!");
+        marsChat.initPlatform({
+          'userName': 'Marven',
+          'host': '10.204.13.145'
+        }, function () {
+          console.log("MarsPlatform ==>  Init Success !");
+        });
+      } catch (error) {
+        console.log("Oooops MarsPlatform ==> Init error !" + error);
+      }
+  
+      });
   }
 }
