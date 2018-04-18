@@ -1,0 +1,10 @@
+.im-tabs-style {
+    .tabbar {
+        height: 10%;
+        opacity: 1;
+    }
+
+    &.tabs-md .tab-button {
+        min-height: 10%;
+    }
+}

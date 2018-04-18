@@ -7,23 +7,23 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { ImArea } from '../pages/implugin/im-area.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { ImAreaService } from "../pages/implugin/im-area.service";
-
+import { PluginModule } from "../pages/pluginroot/pluginroot.module";
+import { AlertAreaModule } from "../pages/alerticon/alert-icon.module";
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    ImArea
+    TabsPage
   ],
   imports: [
+    AlertAreaModule,
+    PluginModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -33,13 +33,11 @@ import { ImAreaService } from "../pages/implugin/im-area.service";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    ImArea
+    TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    ImAreaService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
