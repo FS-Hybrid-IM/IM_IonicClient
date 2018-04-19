@@ -1,7 +1,17 @@
 .im-tabs-style {
     .tabbar {
-        height: 10%;
+        background-color: #2b95ff;
+        height: 7%;
         opacity: 1;
+
+        .tab-button[aria-selected=true] .tab-button-icon {
+            color: #FFFDE7;
+        }
+
+        .tab-button .tab-button-icon {
+            color: #00BCD4;
+        }
+
     }
 
     &.tabs-md .tab-button {

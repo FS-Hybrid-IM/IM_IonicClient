@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef} from '@angular/core';
 import {ImAreaService} from "./im-area.service";
 import { Dialogs } from "./dialog";
+import { ViewController, NavParams } from "ionic-angular";
 declare var marsChat;
 
 export class IHadSay {
@@ -14,6 +15,10 @@ export class IHadSay {
 })
 export class ImArea {
 
+  rootPar;
+
+  viewContr;
+
   dialogs: Dialogs[];
 
   mText: IHadSay = {
@@ -21,8 +26,12 @@ export class ImArea {
     wts: ''
   };
 
-  constructor(private imAreaService: ImAreaService, private cd: ChangeDetectorRef) {
-    marsChat.onMessageReceive(this.successCallback);
+  constructor(private imAreaService: ImAreaService, private cd: ChangeDetectorRef,
+    public navParams: NavParams) {
+
+      this.rootPar = navParams;
+      this.viewContr = this.rootPar.get('viewCtrl');
+      marsChat.onMessageReceive(this.successCallback);
   }
 
   ngOnInit() {
@@ -55,6 +64,12 @@ export class ImArea {
 
   getBeforeDialog(): void {
     this.dialogs = this.imAreaService.getDialogs();
+  }
+
+  dismissSelf(): void {
+    
+    this.viewContr.dismiss();
+
   }
 
   public successCallback = (data: any) => {

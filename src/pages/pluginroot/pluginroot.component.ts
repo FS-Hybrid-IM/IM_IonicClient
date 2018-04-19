@@ -14,5 +14,7 @@ export class PluginRoot {
 
     constructor(public navParams: NavParams, public viewCtrl: ViewController) {
         this.rootParams = { ...navParams.data, viewCtrl: viewCtrl};
+       
     }
+
 }

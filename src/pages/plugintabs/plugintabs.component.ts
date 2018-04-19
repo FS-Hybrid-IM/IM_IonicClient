@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ImArea } from "../implugin/im-area.component";
 import { ContactPage } from "../contact/contact";
+import { FriendList } from "../list/friend";
+import { NavParams, ViewController } from "ionic-angular";
 
 
 @Component({
@@ -8,10 +10,13 @@ import { ContactPage } from "../contact/contact";
 })
 export class TabsPage {
 
+  tabsParams;
+
   talkArea = ImArea;
-  tab3Root = ContactPage;
+  tab3Root = FriendList;
 
-  constructor() {
+  constructor(public navParams: NavParams) {
 
+    this.tabsParams = navParams;
   }
 }
