@@ -285,7 +285,7 @@ var ImArea = (function () {
         };
         this.rootPar = navParams;
         this.viewContr = this.rootPar.get('viewCtrl');
-        marsChat.onMessageReceive(this.successCallback);
+        // marsChat.onMessageReceive(this.successCallback);
     }
     ImArea.prototype.ngOnInit = function () {
         this.getBeforeDialog();
@@ -303,15 +303,15 @@ var ImArea = (function () {
         this.dialogs.push(tempText);
         this.mText.wts = '';
         this.talkLeng = this.dialogs.length;
-        marsChat.sendTextMessage({
-            'to': 'all',
-            'text': tempText.wts,
-            'topic': '0'
-        }, function () {
-            console.log("sendTextMessage Success ! ==> ");
-        }, function () {
-            console.log("sendTextMessage Failed ! ==> ");
-        });
+        // marsChat.sendTextMessage({
+        //     'to': 'all',
+        //     'text': tempText.wts,
+        //     'topic': '0'
+        // }, function () {
+        //     console.log("sendTextMessage Success ! ==> ");
+        // }, function () {
+        //     console.log("sendTextMessage Failed ! ==> ");
+        // });
     };
     ImArea.prototype.getBeforeDialog = function () {
         this.dialogs = this.imAreaService.getDialogs();
@@ -323,10 +323,10 @@ var ImArea = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'im-area',template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\implugin\im-area.html"*/'<div id="main-container" class="im-main-container">\n    <div id="dialog-area" class="im-dialog-area">\n        <div id="dialog-title" class="im-dialog-title">\n            <div id="target-name" class="im-target-name">\n                <div id="dialog-close" class="im-dialog-close">\n                    <ion-icon class="im-close-button" name="close" (click)="dismissSelf()"></ion-icon>\n                    <!-- <img class="im-close-button" src="../www/assets/imgs/close.png" (click)="dismissSelf()"> -->\n                </div>\n                <span>Your Friend Miss IM</span>\n            </div>\n            <div id="title-button-area" class="im-title-button-area">\n                <button class="rkmd-btn btn-fab-mini btn-lightBlue ripple-effect im-email-icons">\n                </button>\n                <button class="rkmd-btn btn-fab-mini btn-cyan ripple-effect im-pen-icons">\n                </button>\n            </div>\n        </div>\n        <div id="dialog-target-head" class="im-dialog-target-head">\n        </div>\n        <div id="talk-area" class="im-talk-area">\n            <ul class="chat-thread" [uiScorlToBottom]="talkLeng">\n                <li [ngClass]="{\'left-li\': dialog.me === 1, \'right-li\': dialog.me === 2}" *ngFor="let dialog of dialogs"><div>{{ dialog.wts }}</div></li>\n            </ul>\n        </div>\n        <div id="input-area" class="im-input-area">\n            <input class="im-input" [(ngModel)]="mText.wts"/>\n            <!-- <input class="im-input"/> -->\n            <div class="demo">\n                <button id="im-input-button" class="rkmd-btn btn-xs btn-lightBlue ripple-effect" (click)="addWhatISay()">send</button>\n            </div>\n        </div>\n    </div>\n\n</div>\n\n'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\implugin\im-area.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]])
     ], ImArea);
     return ImArea;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=im-area.component.js.map

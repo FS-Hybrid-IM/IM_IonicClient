@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Friend, FriendObj } from './friendobj.ts';
+import { Friend, FriendObj } from './friendobj';
 
 @Injectable()
 export class FriendObjService {
