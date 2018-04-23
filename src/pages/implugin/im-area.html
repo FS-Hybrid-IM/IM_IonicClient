@@ -18,7 +18,7 @@
         <div id="dialog-target-head" class="im-dialog-target-head">
         </div>
         <div id="talk-area" class="im-talk-area">
-            <ul class="chat-thread">
+            <ul class="chat-thread" [uiScorlToBottom]="talkLeng">
                 <li [ngClass]="{'left-li': dialog.me === 1, 'right-li': dialog.me === 2}" *ngFor="let dialog of dialogs"><div>{{ dialog.wts }}</div></li>
             </ul>
         </div>

@@ -1,3 +1,62 @@
-page-home {
+@keyframes 'ballToBig' {
+    0% {
+        width:0;
+        height:0
+    }
+    50% {
+        width:50px;
+        height:50px;
+    }
+    100% {
+        width:50px;
+        height:50px;
+    }
+}
+@keyframes 'areaToBig' {
+    0% {
+        width:0px;
+        height:0px;
+        // transform:scale(20,10,0);
+    }
+    // 50% {
+    //     width:230px;
+    //     height:50px;
+    //     // transform:scale(230,30,0);
+    // }
+    100% {
+        width:300px;
+        height:50px;
+        // transform:scale(300,50,0);
+    }
+}
+.ball {
+    width:0;
+     height:0;
+     background-color:aqua;
+      border-radius:50%;
+}
+.square{ 
+    width:10px;
+    height:10px;
+    background-color:beige
+}
+.animation-area:hover {
+    background-color: cadetblue;
+    .ball {
+        animation-name: ballToBig;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        -webkit-transform: translateZ(0);
+    }
 
+}
+
+.square:hover {
+    animation-delay: 1s;
+    animation-name: areaToBig;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ccubic-bezier(.46,1.77,.47,1.54);
 }

@@ -17,6 +17,8 @@ export class ImArea {
 
   rootPar;
 
+  talkLeng: number;
+
   viewContr;
 
   dialogs: Dialogs[];
@@ -50,6 +52,8 @@ export class ImArea {
     }
     this.dialogs.push(tempText);
     this.mText.wts = '';
+
+    this.talkLeng = this.dialogs.length;
 
     marsChat.sendTextMessage({
         'to': 'all',

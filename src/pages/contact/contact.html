@@ -1,17 +1,39 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="icons" color="secondary">
+      <ion-segment-button value="camera" (click)='abtn(1)'>
+        <ion-icon name="camera"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="bookmark" (click)='bbtn(2)'>
+        <ion-icon name="bookmark"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content #ct>
+  <div *ngIf="icons === 'camera'">
+
+    <ion-list>
+        <ion-item *ngFor="let i of a">{{i}}</ion-item>
+      </ion-list>
+      
+      
+       
+  </div>
+
+  <div *ngIf="icons === 'bookmark'">
+      
+          <ion-list>
+              <ion-item *ngFor="let i of b">{{i}}</ion-item>
+            </ion-list>
+            
+            <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+              <ion-infinite-scroll-content></ion-infinite-scroll-content>
+            </ion-infinite-scroll> -->
+             
+        </div>
+        <ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="(icons === 'camera' && aIsMore) || (icons === 'bookmark' && bIsMore)">
+            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+          </ion-infinite-scroll>
 </ion-content>

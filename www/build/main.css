@@ -25684,6 +25684,102 @@ ion-navbar.toolbar {
   right: 10%;
 }
 
+@-webkit-keyframes 'ballToBig' {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes 'ballToBig' {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@-webkit-keyframes 'areaToBig' {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 300px;
+    height: 50px;
+  }
+}
+
+@keyframes 'areaToBig' {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 300px;
+    height: 50px;
+  }
+}
+
+.ball {
+  width: 0;
+  height: 0;
+  background-color: aqua;
+  border-radius: 50%;
+}
+
+.square {
+  width: 10px;
+  height: 10px;
+  background-color: beige;
+}
+
+.animation-area:hover {
+  background-color: cadetblue;
+}
+
+.animation-area:hover .ball {
+  -webkit-animation-name: ballToBig;
+  animation-name: ballToBig;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transform: translateZ(0);
+}
+
+.square:hover {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-name: areaToBig;
+  animation-name: areaToBig;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ccubic-bezier(0.46, 1.77, 0.47, 1.54);
+  animation-timing-function: ccubic-bezier(0.46, 1.77, 0.47, 1.54);
+}
+
 html {
   font: 16px/20px 'Noto Sans', sans-serif;
 }
@@ -26528,6 +26624,10 @@ footer .footer-content span {
     -webkit-transform: scale(2.5);
     transform: scale(2.5);
   }
+}
+
+.animation-area:hover {
+  background-color: cadetblue;
 }
 
 .im-tabs-style .tabbar {
