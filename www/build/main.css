@@ -26626,8 +26626,66 @@ footer .footer-content span {
   }
 }
 
-.animation-area:hover {
-  background-color: cadetblue;
+.list-avatar-page ion-note {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.im-friend-list-area .list {
+  margin: -1px 0 0;
+}
+
+.im-friend-list-area .item.item-md.list-header.list-header-md,
+.im-friend-list-area .item.item-ios.list-header.list-header-ios {
+  color: #E0F7FA;
+  background-color: #00B8D4;
+  min-height: 20px;
+}
+
+.im-friend-list-area h2 {
+  font-size: 24px;
+}
+
+.im-friend-list-area .label p {
+  font-size: 18px;
+}
+
+.plugin-home-img {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #006064;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.plugin-home-img img {
+  border-radius: 50%;
+  height: auto;
+  width: auto;
+}
+
+.plugin-home-img p {
+  color: #BBDEFB;
+  font-size: large;
 }
 
 .im-tabs-style .tabbar {

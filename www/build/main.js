@@ -285,7 +285,7 @@ var ImArea = (function () {
         };
         this.rootPar = navParams;
         this.viewContr = this.rootPar.get('viewCtrl');
-        // marsChat.onMessageReceive(this.successCallback);
+        marsChat.onMessageReceive(this.successCallback);
     }
     ImArea.prototype.ngOnInit = function () {
         this.getBeforeDialog();
@@ -303,15 +303,15 @@ var ImArea = (function () {
         this.dialogs.push(tempText);
         this.mText.wts = '';
         this.talkLeng = this.dialogs.length;
-        // marsChat.sendTextMessage({
-        //     'to': 'all',
-        //     'text': tempText.wts,
-        //     'topic': '0'
-        // }, function () {
-        //     console.log("sendTextMessage Success ! ==> ");
-        // }, function () {
-        //     console.log("sendTextMessage Failed ! ==> ");
-        // });
+        marsChat.sendTextMessage({
+            'to': 'all',
+            'text': tempText.wts,
+            'topic': '0'
+        }, function () {
+            console.log("sendTextMessage Success ! ==> ");
+        }, function () {
+            console.log("sendTextMessage Failed ! ==> ");
+        });
     };
     ImArea.prototype.getBeforeDialog = function () {
         this.dialogs = this.imAreaService.getDialogs();
@@ -323,10 +323,10 @@ var ImArea = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'im-area',template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\implugin\im-area.html"*/'<div id="main-container" class="im-main-container">\n    <div id="dialog-area" class="im-dialog-area">\n        <div id="dialog-title" class="im-dialog-title">\n            <div id="target-name" class="im-target-name">\n                <div id="dialog-close" class="im-dialog-close">\n                    <ion-icon class="im-close-button" name="close" (click)="dismissSelf()"></ion-icon>\n                    <!-- <img class="im-close-button" src="../www/assets/imgs/close.png" (click)="dismissSelf()"> -->\n                </div>\n                <span>Your Friend Miss IM</span>\n            </div>\n            <div id="title-button-area" class="im-title-button-area">\n                <button class="rkmd-btn btn-fab-mini btn-lightBlue ripple-effect im-email-icons">\n                </button>\n                <button class="rkmd-btn btn-fab-mini btn-cyan ripple-effect im-pen-icons">\n                </button>\n            </div>\n        </div>\n        <div id="dialog-target-head" class="im-dialog-target-head">\n        </div>\n        <div id="talk-area" class="im-talk-area">\n            <ul class="chat-thread" [uiScorlToBottom]="talkLeng">\n                <li [ngClass]="{\'left-li\': dialog.me === 1, \'right-li\': dialog.me === 2}" *ngFor="let dialog of dialogs"><div>{{ dialog.wts }}</div></li>\n            </ul>\n        </div>\n        <div id="input-area" class="im-input-area">\n            <input class="im-input" [(ngModel)]="mText.wts"/>\n            <!-- <input class="im-input"/> -->\n            <div class="demo">\n                <button id="im-input-button" class="rkmd-btn btn-xs btn-lightBlue ripple-effect" (click)="addWhatISay()">send</button>\n            </div>\n        </div>\n    </div>\n\n</div>\n\n'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\implugin\im-area.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object])
     ], ImArea);
     return ImArea;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=im-area.component.js.map
@@ -462,6 +462,7 @@ var PluginRoot = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FriendList; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__friend_service__ = __webpack_require__(203);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -472,14 +473,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var FriendList = (function () {
-    function FriendList() {
+    function FriendList(friendObjService) {
+        this.friendObjService = friendObjService;
+        this.talkingLists = friendObjService.getListDate();
     }
     FriendList = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'friend-list',template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\list\friend.html"*/'<ion-header>\n\n    <ion-navbar>\n\n      <ion-title>\n\n        Friend\n\n      </ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  \n\n  <ion-content>\n\n    <!-- <ion-list>\n\n      <ion-list-header>Friend List</ion-list-header>\n\n      <ion-item>\n\n        <ion-icon name="ionic" item-start></ion-icon>\n\n        @IM\n\n      </ion-item>\n\n    </ion-list> -->\n\n\n\n    <div style="display:flex" class="animation-area">\n\n        <div style="width:50px; height:50px;background-color:aqua; border-radius:50%">ball</div>\n\n        <div style="width:150px;height:50px;background-color:beige">this is text area</div>\n\n    </div>\n\n  </ion-content>\n\n  '/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\list\friend.html"*/
+            selector: 'friend-list',template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\list\friend.html"*/'  <ion-header>\n\n\n\n  <ion-navbar>\n\n\n\n    <ion-title>Avatar List</ion-title>\n\n\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content class="list-avatar-page im-friend-list-area">\n\n\n\n  <ion-list *ngFor="let talkingList of talkingLists">\n\n      <ion-list-header>{{talkingList.headText}}</ion-list-header>\n\n      <ion-item *ngFor="let talkingFriend of talkingList.talkingFriends">\n\n        <ion-avatar item-start>\n\n          <img src="{{talkingFriend.headImg}}" tabBadge="3">\n\n        </ion-avatar>\n\n        <h2>{{talkingFriend.name}}</h2>\n\n        <p>{{talkingFriend.selfMark}}</p>\n\n        <ion-note item-end>{{talkingFriend.lastChangeTime}}</ion-note>\n\n      </ion-item>\n\n  </ion-list>\n\n\n\n  <!-- <ion-list>\n\n\n\n\n\n\n\n    <ion-list-header>Today</ion-list-header>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-1.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Woody</h2>\n\n\n\n      <p>This town ain\'t big enough for the two of us!</p>\n\n\n\n      <ion-note item-end>3:43 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-2.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Buzz Lightyear</h2>\n\n\n\n      <p>My eyeballs could have been sucked from their sockets!</p>\n\n\n\n      <ion-note item-end>1:12 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-3.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Jessie</h2>\n\n\n\n      <p>Well aren\'t you just the sweetest space toy I ever did meet!</p>\n\n\n\n      <ion-note item-end>10:03 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-4.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Mr. Potato Head</h2>\n\n\n\n      <p>You\'re not turning me into a Mashed Potato.</p>\n\n\n\n      <ion-note item-end>5:47 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n  </ion-list>\n\n\n\n\n\n\n\n  <ion-list>\n\n\n\n\n\n\n\n    <ion-list-header>Yesterday</ion-list-header>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-5.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Hamm</h2>\n\n\n\n      <p>You heard of Kung Fu? Well get ready for pork chop.</p>\n\n\n\n      <ion-note item-end>11:11 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-2.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Slinky Dog</h2>\n\n\n\n      <p>I may not be a smart dog, but I know what roadkill is.</p>\n\n\n\n      <ion-note item-end>8:54 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-4.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Rex</h2>\n\n\n\n      <p>Were you scared? Tell me honestly.</p>\n\n\n\n      <ion-note item-end>7:22 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-3.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Bullseye</h2>\n\n\n\n      <p>Neigh!</p>\n\n\n\n      <ion-note item-end>2:08 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n  </ion-list>\n\n\n\n\n\n\n\n  <ion-list>\n\n\n\n\n\n\n\n    <ion-list-header>Last Week</ion-list-header>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-2.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Barbie</h2>\n\n\n\n      <p>So, who\'s ready for Ken\'s dream tour?</p>\n\n\n\n      <ion-note item-end>Sun</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-6.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Squeeze</h2>\n\n\n\n      <p>The claw is our master.</p>\n\n\n\n      <ion-note item-end>Fri</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img class="list-head-img" src="assets/imgs/head-img-5.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Sarge</h2>\n\n\n\n      <p>Code Red, repeat: We\'re at Code Red!</p>\n\n\n\n      <ion-note item-end>Wed</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/img/avatar-ts-bopeep.png">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Bo Peep</h2>\n\n\n\n      <p>What would you say if I get someone else to watch the sheep for me tonight?</p>\n\n\n\n      <ion-note item-end>Mon</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n  </ion-list> -->\n\n\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\list\friend.html"*/
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__friend_service__["a" /* FriendObjService */]])
     ], FriendList);
     return FriendList;
 }());
@@ -489,6 +493,159 @@ var FriendList = (function () {
 /***/ }),
 
 /***/ 203:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FriendObjService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FriendObjService = (function () {
+    function FriendObjService() {
+        this.getListFromSev();
+    }
+    FriendObjService.prototype.getListFromSev = function () {
+        this.friendList1 = [
+            {
+                headImg: 'assets/imgs/head-img-1.jpeg',
+                name: 'Woody',
+                selfMark: "This town ain't big enough for the two of us!",
+                lastChangeTime: '3:43 pm'
+            },
+            {
+                headImg: 'assets/imgs/head-img-2.jpeg',
+                name: 'Buzz Lightyear',
+                selfMark: 'My eyeballs could have been sucked from their sockets!',
+                lastChangeTime: '1:12 pm'
+            },
+            {
+                headImg: 'assets/imgs/head-img-3.jpeg',
+                name: 'Jessie',
+                selfMark: "Well aren't you just the sweetest space toy I ever did meet!",
+                lastChangeTime: '10:03 am'
+            },
+            {
+                headImg: 'assets/imgs/head-img-4.jpeg',
+                name: 'Mr. Potato Head',
+                selfMark: "You're not turning me into a Mashed Potato.",
+                lastChangeTime: '5:47 am'
+            }
+        ];
+        this.friendList2 = [
+            {
+                headImg: 'assets/imgs/head-img-5.jpeg',
+                name: 'Hamm',
+                selfMark: "You heard of Kung Fu? Well get ready for pork chop.",
+                lastChangeTime: '11:11 pm'
+            },
+            {
+                headImg: 'assets/imgs/head-img-2.jpeg',
+                name: 'Slinky Dog',
+                selfMark: 'I may not be a smart dog, but I know what roadkill is.',
+                lastChangeTime: '8:54 pm'
+            },
+            {
+                headImg: 'assets/imgs/head-img-4.jpeg',
+                name: 'Rex',
+                selfMark: "Were you scared? Tell me honestly.",
+                lastChangeTime: '7:22 am'
+            },
+            {
+                headImg: 'assets/imgs/head-img-1.jpeg',
+                name: 'Bullseye',
+                selfMark: "Neigh!",
+                lastChangeTime: '2:08 am'
+            }
+        ];
+        this.friendList3 = [
+            {
+                headImg: 'assets/imgs/head-img-5.jpeg',
+                name: 'Barbie',
+                selfMark: "So, who's ready for Ken's dream tour?",
+                lastChangeTime: 'Sun'
+            },
+            {
+                headImg: 'assets/imgs/head-img-3.jpeg',
+                name: 'Squeeze',
+                selfMark: 'The claw is our master.',
+                lastChangeTime: 'Fri'
+            },
+            {
+                headImg: 'assets/imgs/head-img-3.jpeg',
+                name: 'Sarge',
+                selfMark: "Code Red, repeat: We're at Code Red!",
+                lastChangeTime: 'Wed'
+            }
+        ];
+        this.friendObj = [
+            {
+                headText: 'Today',
+                talkingFriends: this.friendList1
+            },
+            {
+                headText: 'Yesterday',
+                talkingFriends: this.friendList2
+            },
+            {
+                headText: 'Last Week',
+                talkingFriends: this.friendList3
+            },
+        ];
+    };
+    FriendObjService.prototype.getListDate = function () {
+        return this.friendObj;
+    };
+    FriendObjService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], FriendObjService);
+    return FriendObjService;
+}());
+
+//# sourceMappingURL=friend.service.js.map
+
+/***/ }),
+
+/***/ 204:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PluginHomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var PluginHomePage = (function () {
+    function PluginHomePage() {
+    }
+    PluginHomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\pluginhome\pluginhome.html"*/'<div class="plugin-home-img">\n\n    <p>Welcome to the IM</p>\n\n    <img src="../../assets/imgs/3.gif" >\n\n</div>'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\pluginhome\pluginhome.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], PluginHomePage);
+    return PluginHomePage;
+}());
+
+//# sourceMappingURL=pluginhome.component.js.map
+
+/***/ }),
+
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -522,13 +679,13 @@ var AlertServices = (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(230);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -536,7 +693,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 228:
+/***/ 230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -544,15 +701,15 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(273);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_pluginroot_pluginroot_module__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_alerticon_alert_icon_module__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_pluginroot_pluginroot_module__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_alerticon_alert_icon_module__ = __webpack_require__(285);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -613,7 +770,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 271:
+/***/ 273:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -671,7 +828,7 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 280:
+/***/ 282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -683,14 +840,18 @@ var MyApp = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pluginroot_component__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__plugintabs_plugintabs_component__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_friend__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__implugin_im_area_directive__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__login_loginpage_component__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__implugin_im_area_directive__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__login_loginpage_component__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__list_friend_service__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pluginhome_pluginhome_component__ = __webpack_require__(204);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -711,7 +872,8 @@ var PluginModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__pluginroot_component__["a" /* PluginRoot */],
                 __WEBPACK_IMPORTED_MODULE_6__list_friend__["a" /* FriendList */],
                 __WEBPACK_IMPORTED_MODULE_7__implugin_im_area_directive__["a" /* HighlightDirective */],
-                __WEBPACK_IMPORTED_MODULE_8__login_loginpage_component__["a" /* LoginPage */]
+                __WEBPACK_IMPORTED_MODULE_8__login_loginpage_component__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pluginhome_pluginhome_component__["a" /* PluginHomePage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__plugintabs_plugintabs_component__["a" /* TabsPage */])
@@ -721,10 +883,12 @@ var PluginModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__plugintabs_plugintabs_component__["a" /* TabsPage */],
                 __WEBPACK_IMPORTED_MODULE_4__pluginroot_component__["a" /* PluginRoot */],
                 __WEBPACK_IMPORTED_MODULE_6__list_friend__["a" /* FriendList */],
-                __WEBPACK_IMPORTED_MODULE_8__login_loginpage_component__["a" /* LoginPage */]
+                __WEBPACK_IMPORTED_MODULE_8__login_loginpage_component__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pluginhome_pluginhome_component__["a" /* PluginHomePage */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_3__implugin_im_area_service__["a" /* ImAreaService */]
+                __WEBPACK_IMPORTED_MODULE_3__implugin_im_area_service__["a" /* ImAreaService */],
+                __WEBPACK_IMPORTED_MODULE_9__list_friend_service__["a" /* FriendObjService */]
             ]
         })
     ], PluginModule);
@@ -735,7 +899,7 @@ var PluginModule = (function () {
 
 /***/ }),
 
-/***/ 281:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -780,7 +944,7 @@ var HighlightDirective = (function () {
 
 /***/ }),
 
-/***/ 282:
+/***/ 284:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -821,14 +985,14 @@ var LoginPage = (function () {
 
 /***/ }),
 
-/***/ 283:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertAreaModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__alert_icon_component__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__alert_icon_services__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__alert_icon_component__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__alert_icon_services__ = __webpack_require__(205);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -862,7 +1026,7 @@ var AlertAreaModule = (function () {
 
 /***/ }),
 
-/***/ 284:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -870,7 +1034,7 @@ var AlertAreaModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pluginroot_pluginroot_component__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__alert_icon_services__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__alert_icon_services__ = __webpack_require__(205);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -917,6 +1081,7 @@ var AlertArea = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__implugin_im_area_component__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_friend__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pluginhome_pluginhome_component__ = __webpack_require__(204);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -930,15 +1095,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var TabsPage = (function () {
     function TabsPage(navParams) {
         this.navParams = navParams;
         this.talkArea = __WEBPACK_IMPORTED_MODULE_1__implugin_im_area_component__["a" /* ImArea */];
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__list_friend__["a" /* FriendList */];
+        this.tabHomePage = __WEBPACK_IMPORTED_MODULE_4__pluginhome_pluginhome_component__["a" /* PluginHomePage */];
         this.tabsParams = navParams;
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\plugintabs\plugintabs.html"*/'<ion-tabs class="im-tabs-style" [color]="royal">\n  <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams"></ion-tab>\n  <ion-tab [root]="tab3Root" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\plugintabs\plugintabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\plugintabs\plugintabs.html"*/'<ion-tabs class="im-tabs-style" [color]="royal">\n  <ion-tab [root]="tabHomePage"tabIcon="home" [rootParams]="tabsParams"></ion-tab>\n  <ion-tab [root]="tab3Root" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams"></ion-tab>\n  <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\plugintabs\plugintabs.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */]])
     ], TabsPage);
@@ -949,5 +1116,5 @@ var TabsPage = (function () {
 
 /***/ })
 
-},[204]);
+},[206]);
 //# sourceMappingURL=main.js.map

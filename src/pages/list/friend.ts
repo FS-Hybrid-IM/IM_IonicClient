@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { FriendObjService } from "./friend.service";
 
 @Component({
   selector: 'friend-list',
@@ -7,8 +8,10 @@ import { NavController } from 'ionic-angular';
 })
 export class FriendList {
 
-  constructor() {
+  talkingLists;
 
+  constructor(private friendObjService: FriendObjService) {
+    this.talkingLists = friendObjService.getListDate();
   }
 
 }

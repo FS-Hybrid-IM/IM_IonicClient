@@ -7,6 +7,8 @@ import { TabsPage } from "../plugintabs/plugintabs.component";
 import { FriendList } from "../list/friend";
 import { HighlightDirective } from "../implugin/im-area.directive";
 import { LoginPage } from "../login/loginpage.component";
+import { FriendObjService } from "../list/friend.service";
+import { PluginHomePage } from "../pluginhome/pluginhome.component";
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { LoginPage } from "../login/loginpage.component";
     PluginRoot,
     FriendList,
     HighlightDirective,
-    LoginPage
+    LoginPage,
+    PluginHomePage
   ],
   imports: [
     IonicPageModule.forChild(TabsPage)
@@ -25,10 +28,12 @@ import { LoginPage } from "../login/loginpage.component";
     TabsPage,
     PluginRoot,
     FriendList,
-    LoginPage
+    LoginPage,
+    PluginHomePage
   ],
   providers: [
-    ImAreaService
+    ImAreaService,
+    FriendObjService
   ]
 })
 export class PluginModule {}
