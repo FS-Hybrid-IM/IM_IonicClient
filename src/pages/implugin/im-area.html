@@ -6,7 +6,7 @@
                     <ion-icon class="im-close-button" name="close" (click)="dismissSelf()"></ion-icon>
                     <!-- <img class="im-close-button" src="../www/assets/imgs/close.png" (click)="dismissSelf()"> -->
                 </div>
-                <span>Your Friend Miss IM</span>
+                <span>{{ friendObj.name }}</span>
             </div>
             <div id="title-button-area" class="im-title-button-area">
                 <button class="rkmd-btn btn-fab-mini btn-lightBlue ripple-effect im-email-icons">
@@ -16,6 +16,7 @@
             </div>
         </div>
         <div id="dialog-target-head" class="im-dialog-target-head">
+            <img src="{{ friendObj.headImg }}">
         </div>
         <div id="talk-area" class="im-talk-area">
             <ul class="chat-thread" [uiScorlToBottom]="talkLeng">

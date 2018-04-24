@@ -9,6 +9,7 @@ import { HighlightDirective } from "../implugin/im-area.directive";
 import { LoginPage } from "../login/loginpage.component";
 import { FriendObjService } from "../list/friend.service";
 import { PluginHomePage } from "../pluginhome/pluginhome.component";
+import { PluginDateService } from "./pluginroot.date.service";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PluginHomePage } from "../pluginhome/pluginhome.component";
   ],
   providers: [
     ImAreaService,
-    FriendObjService
+    FriendObjService,
+    PluginDateService
   ]
 })
 export class PluginModule {}

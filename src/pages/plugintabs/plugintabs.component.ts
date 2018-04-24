@@ -17,8 +17,16 @@ export class TabsPage {
   tab3Root = FriendList;
   tabHomePage = PluginHomePage;
 
+  selectPerson;
+
+
   constructor(public navParams: NavParams) {
 
     this.tabsParams = navParams;
+
   }
+
+  selectTalkingPage(): void {
+    this.tabsParams.selectTab = 2;
+  } 
 }

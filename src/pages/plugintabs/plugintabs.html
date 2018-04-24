@@ -1,6 +1,6 @@
-<ion-tabs class="im-tabs-style" [color]="royal">
+<ion-tabs class="im-tabs-style" [color]="royal" tabbarPlacement="bottom">
   <ion-tab [root]="tabHomePage"tabIcon="home" [rootParams]="tabsParams"></ion-tab>
   <ion-tab [root]="tab3Root" tabIcon="contacts"></ion-tab>
-  <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams"></ion-tab>
+  <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams" (ionSelect)="selectTalkingPage()"></ion-tab>
   <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams"></ion-tab>
 </ion-tabs>

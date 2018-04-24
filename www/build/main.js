@@ -1,48 +1,95 @@
 webpackJsonp([0],{
 
-/***/ 110:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 110;
-
-/***/ }),
-
-/***/ 151:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 151;
-
-/***/ }),
-
-/***/ 195:
+/***/ 100:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__implugin_im_area_component__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_friend__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pluginhome_pluginhome_component__ = __webpack_require__(205);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var TabsPage = (function () {
+    function TabsPage(navParams) {
+        this.navParams = navParams;
+        this.talkArea = __WEBPACK_IMPORTED_MODULE_1__implugin_im_area_component__["a" /* ImArea */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__list_friend__["a" /* FriendList */];
+        this.tabHomePage = __WEBPACK_IMPORTED_MODULE_4__pluginhome_pluginhome_component__["a" /* PluginHomePage */];
+        this.tabsParams = navParams;
+    }
+    TabsPage.prototype.selectTalkingPage = function () {
+        this.tabsParams.selectTab = 2;
+    };
+    TabsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\plugintabs\plugintabs.html"*/'<ion-tabs class="im-tabs-style" [color]="royal" tabbarPlacement="bottom">\n  <ion-tab [root]="tabHomePage"tabIcon="home" [rootParams]="tabsParams"></ion-tab>\n  <ion-tab [root]="tab3Root" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams" (ionSelect)="selectTalkingPage()"></ion-tab>\n  <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\plugintabs\plugintabs.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */]])
+    ], TabsPage);
+    return TabsPage;
+}());
+
+//# sourceMappingURL=plugintabs.component.js.map
+
+/***/ }),
+
+/***/ 111:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 111;
+
+/***/ }),
+
+/***/ 152:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 152;
+
+/***/ }),
+
+/***/ 196:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(199);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -74,13 +121,13 @@ var TabsPage = (function () {
 
 /***/ }),
 
-/***/ 196:
+/***/ 197:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -109,13 +156,13 @@ var AboutPage = (function () {
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -199,13 +246,13 @@ var ContactPage = (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -234,15 +281,16 @@ var HomePage = (function () {
 
 /***/ }),
 
-/***/ 199:
+/***/ 200:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export IHadSay */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImArea; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__im_area_service__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__im_area_service__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pluginroot_pluginroot_date_service__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -255,6 +303,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+// declare var marsChat;
 var IHadSay = (function () {
     function IHadSay() {
     }
@@ -262,11 +312,12 @@ var IHadSay = (function () {
 }());
 
 var ImArea = (function () {
-    function ImArea(imAreaService, cd, navParams) {
+    function ImArea(imAreaService, cd, navParams, pluginDateService) {
         var _this = this;
         this.imAreaService = imAreaService;
         this.cd = cd;
         this.navParams = navParams;
+        this.pluginDateService = pluginDateService;
         this.mText = {
             me: 2,
             wts: ''
@@ -285,9 +336,24 @@ var ImArea = (function () {
         };
         this.rootPar = navParams;
         this.viewContr = this.rootPar.get('viewCtrl');
+        marsChat.onMessageReceive(this.successCallback);
+        this.pluginDateSer = pluginDateService;
         // marsChat.onMessageReceive(this.successCallback);
     }
+    ImArea.prototype.ionViewWillEnter = function () {
+        if (this.pluginDateSer.getTalkingPersion() !== undefined) {
+            this.friendObj = this.pluginDateSer.getTalkingPersion();
+        }
+    };
     ImArea.prototype.ngOnInit = function () {
+        if (this.friendObj === undefined) {
+            this.friendObj = {
+                'headImg': 'assets/imgs/playerOne.jpg',
+                'name': "I'm your servider",
+                'selfMark': 'thank you for you come to use',
+                'lastChangeTime': 'all day'
+            };
+        }
         this.getBeforeDialog();
     };
     ImArea.prototype.addWhatISay = function () {
@@ -303,15 +369,15 @@ var ImArea = (function () {
         this.dialogs.push(tempText);
         this.mText.wts = '';
         this.talkLeng = this.dialogs.length;
-        // marsChat.sendTextMessage({
-        //     'to': 'all',
-        //     'text': tempText.wts,
-        //     'topic': '0'
-        // }, function () {
-        //     console.log("sendTextMessage Success ! ==> ");
-        // }, function () {
-        //     console.log("sendTextMessage Failed ! ==> ");
-        // });
+        marsChat.sendTextMessage({
+            'to': 'all',
+            'text': tempText.wts,
+            'topic': '0'
+        }, function () {
+            console.log("sendTextMessage Success ! ==> ");
+        }, function () {
+            console.log("sendTextMessage Failed ! ==> ");
+        });
     };
     ImArea.prototype.getBeforeDialog = function () {
         this.dialogs = this.imAreaService.getDialogs();
@@ -321,19 +387,19 @@ var ImArea = (function () {
     };
     ImArea = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'im-area',template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\implugin\im-area.html"*/'<div id="main-container" class="im-main-container">\n    <div id="dialog-area" class="im-dialog-area">\n        <div id="dialog-title" class="im-dialog-title">\n            <div id="target-name" class="im-target-name">\n                <div id="dialog-close" class="im-dialog-close">\n                    <ion-icon class="im-close-button" name="close" (click)="dismissSelf()"></ion-icon>\n                    <!-- <img class="im-close-button" src="../www/assets/imgs/close.png" (click)="dismissSelf()"> -->\n                </div>\n                <span>Your Friend Miss IM</span>\n            </div>\n            <div id="title-button-area" class="im-title-button-area">\n                <button class="rkmd-btn btn-fab-mini btn-lightBlue ripple-effect im-email-icons">\n                </button>\n                <button class="rkmd-btn btn-fab-mini btn-cyan ripple-effect im-pen-icons">\n                </button>\n            </div>\n        </div>\n        <div id="dialog-target-head" class="im-dialog-target-head">\n        </div>\n        <div id="talk-area" class="im-talk-area">\n            <ul class="chat-thread" [uiScorlToBottom]="talkLeng">\n                <li [ngClass]="{\'left-li\': dialog.me === 1, \'right-li\': dialog.me === 2}" *ngFor="let dialog of dialogs"><div>{{ dialog.wts }}</div></li>\n            </ul>\n        </div>\n        <div id="input-area" class="im-input-area">\n            <input class="im-input" [(ngModel)]="mText.wts"/>\n            <!-- <input class="im-input"/> -->\n            <div class="demo">\n                <button id="im-input-button" class="rkmd-btn btn-xs btn-lightBlue ripple-effect" (click)="addWhatISay()">send</button>\n            </div>\n        </div>\n    </div>\n\n</div>\n\n'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\implugin\im-area.html"*/
+            selector: 'im-area',template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\implugin\im-area.html"*/'<div id="main-container" class="im-main-container">\n    <div id="dialog-area" class="im-dialog-area">\n        <div id="dialog-title" class="im-dialog-title">\n            <div id="target-name" class="im-target-name">\n                <div id="dialog-close" class="im-dialog-close">\n                    <ion-icon class="im-close-button" name="close" (click)="dismissSelf()"></ion-icon>\n                    <!-- <img class="im-close-button" src="../www/assets/imgs/close.png" (click)="dismissSelf()"> -->\n                </div>\n                <span>{{ friendObj.name }}</span>\n            </div>\n            <div id="title-button-area" class="im-title-button-area">\n                <button class="rkmd-btn btn-fab-mini btn-lightBlue ripple-effect im-email-icons">\n                </button>\n                <button class="rkmd-btn btn-fab-mini btn-cyan ripple-effect im-pen-icons">\n                </button>\n            </div>\n        </div>\n        <div id="dialog-target-head" class="im-dialog-target-head">\n            <img src="{{ friendObj.headImg }}">\n        </div>\n        <div id="talk-area" class="im-talk-area">\n            <ul class="chat-thread" [uiScorlToBottom]="talkLeng">\n                <li [ngClass]="{\'left-li\': dialog.me === 1, \'right-li\': dialog.me === 2}" *ngFor="let dialog of dialogs"><div>{{ dialog.wts }}</div></li>\n            </ul>\n        </div>\n        <div id="input-area" class="im-input-area">\n            <input class="im-input" [(ngModel)]="mText.wts"/>\n            <!-- <input class="im-input"/> -->\n            <div class="demo">\n                <button id="im-input-button" class="rkmd-btn btn-xs btn-lightBlue ripple-effect" (click)="addWhatISay()">send</button>\n            </div>\n        </div>\n    </div>\n\n</div>\n\n'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\implugin\im-area.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__im_area_service__["a" /* ImAreaService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__pluginroot_pluginroot_date_service__["a" /* PluginDateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__pluginroot_pluginroot_date_service__["a" /* PluginDateService */]) === "function" && _d || Object])
     ], ImArea);
     return ImArea;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=im-area.component.js.map
 
 /***/ }),
 
-/***/ 200:
+/***/ 201:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -370,14 +436,14 @@ var ImAreaService = (function () {
 
 /***/ }),
 
-/***/ 201:
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PluginRoot; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__plugintabs_plugintabs_component__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__plugintabs_plugintabs_component__ = __webpack_require__(100);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -456,13 +522,15 @@ var PluginRoot = (function () {
 
 /***/ }),
 
-/***/ 202:
+/***/ 203:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FriendList; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__friend_service__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__friend_service__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pluginroot_pluginroot_date_service__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -474,16 +542,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var FriendList = (function () {
-    function FriendList(friendObjService) {
+    function FriendList(friendObjService, navParams, navCtrl, pluginDateService) {
         this.friendObjService = friendObjService;
+        this.navParams = navParams;
+        this.navCtrl = navCtrl;
+        this.pluginDateService = pluginDateService;
         this.talkingLists = friendObjService.getListDate();
+        this.rootPrams = navParams;
     }
+    FriendList.prototype.toTalk = function (talkingFriend) {
+        this.pluginDateService.setTalkingPersion(talkingFriend);
+        this.navCtrl.parent.select(2);
+    };
     FriendList = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'friend-list',template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\list\friend.html"*/'  <ion-header>\n\n\n\n  <ion-navbar>\n\n\n\n    <ion-title>Avatar List</ion-title>\n\n\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content class="list-avatar-page im-friend-list-area">\n\n\n\n  <ion-list *ngFor="let talkingList of talkingLists">\n\n      <ion-list-header>{{talkingList.headText}}</ion-list-header>\n\n      <ion-item *ngFor="let talkingFriend of talkingList.talkingFriends">\n\n        <ion-avatar item-start>\n\n          <img src="{{talkingFriend.headImg}}" tabBadge="3">\n\n        </ion-avatar>\n\n        <h2>{{talkingFriend.name}}</h2>\n\n        <p>{{talkingFriend.selfMark}}</p>\n\n        <ion-note item-end>{{talkingFriend.lastChangeTime}}</ion-note>\n\n      </ion-item>\n\n  </ion-list>\n\n\n\n  <!-- <ion-list>\n\n\n\n\n\n\n\n    <ion-list-header>Today</ion-list-header>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-1.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Woody</h2>\n\n\n\n      <p>This town ain\'t big enough for the two of us!</p>\n\n\n\n      <ion-note item-end>3:43 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-2.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Buzz Lightyear</h2>\n\n\n\n      <p>My eyeballs could have been sucked from their sockets!</p>\n\n\n\n      <ion-note item-end>1:12 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-3.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Jessie</h2>\n\n\n\n      <p>Well aren\'t you just the sweetest space toy I ever did meet!</p>\n\n\n\n      <ion-note item-end>10:03 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-4.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Mr. Potato Head</h2>\n\n\n\n      <p>You\'re not turning me into a Mashed Potato.</p>\n\n\n\n      <ion-note item-end>5:47 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n  </ion-list>\n\n\n\n\n\n\n\n  <ion-list>\n\n\n\n\n\n\n\n    <ion-list-header>Yesterday</ion-list-header>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-5.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Hamm</h2>\n\n\n\n      <p>You heard of Kung Fu? Well get ready for pork chop.</p>\n\n\n\n      <ion-note item-end>11:11 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-2.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Slinky Dog</h2>\n\n\n\n      <p>I may not be a smart dog, but I know what roadkill is.</p>\n\n\n\n      <ion-note item-end>8:54 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-4.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Rex</h2>\n\n\n\n      <p>Were you scared? Tell me honestly.</p>\n\n\n\n      <ion-note item-end>7:22 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-3.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Bullseye</h2>\n\n\n\n      <p>Neigh!</p>\n\n\n\n      <ion-note item-end>2:08 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n  </ion-list>\n\n\n\n\n\n\n\n  <ion-list>\n\n\n\n\n\n\n\n    <ion-list-header>Last Week</ion-list-header>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-2.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Barbie</h2>\n\n\n\n      <p>So, who\'s ready for Ken\'s dream tour?</p>\n\n\n\n      <ion-note item-end>Sun</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-6.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Squeeze</h2>\n\n\n\n      <p>The claw is our master.</p>\n\n\n\n      <ion-note item-end>Fri</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img class="list-head-img" src="assets/imgs/head-img-5.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Sarge</h2>\n\n\n\n      <p>Code Red, repeat: We\'re at Code Red!</p>\n\n\n\n      <ion-note item-end>Wed</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/img/avatar-ts-bopeep.png">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Bo Peep</h2>\n\n\n\n      <p>What would you say if I get someone else to watch the sheep for me tonight?</p>\n\n\n\n      <ion-note item-end>Mon</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n  </ion-list> -->\n\n\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\list\friend.html"*/
+            selector: 'friend-list',template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\list\friend.html"*/'  <ion-header>\n\n\n\n  <ion-navbar>\n\n\n\n    <ion-title>Avatar List</ion-title>\n\n\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content class="list-avatar-page im-friend-list-area">\n\n\n\n  <ion-list *ngFor="let talkingList of talkingLists">\n\n      <ion-list-header>{{talkingList.headText}}</ion-list-header>\n\n      <ion-item *ngFor="let talkingFriend of talkingList.talkingFriends" (click)="toTalk(talkingFriend)">\n\n        <ion-avatar item-start>\n\n          <img src="{{talkingFriend.headImg}}" tabBadge="3">\n\n        </ion-avatar>\n\n        <h2>{{talkingFriend.name}}</h2>\n\n        <p>{{talkingFriend.selfMark}}</p>\n\n        <ion-note item-end>{{talkingFriend.lastChangeTime}}</ion-note>\n\n      </ion-item>\n\n  </ion-list>\n\n\n\n  <!-- <ion-list>\n\n\n\n\n\n\n\n    <ion-list-header>Today</ion-list-header>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-1.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Woody</h2>\n\n\n\n      <p>This town ain\'t big enough for the two of us!</p>\n\n\n\n      <ion-note item-end>3:43 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-2.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Buzz Lightyear</h2>\n\n\n\n      <p>My eyeballs could have been sucked from their sockets!</p>\n\n\n\n      <ion-note item-end>1:12 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-3.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Jessie</h2>\n\n\n\n      <p>Well aren\'t you just the sweetest space toy I ever did meet!</p>\n\n\n\n      <ion-note item-end>10:03 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-4.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Mr. Potato Head</h2>\n\n\n\n      <p>You\'re not turning me into a Mashed Potato.</p>\n\n\n\n      <ion-note item-end>5:47 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n  </ion-list>\n\n\n\n\n\n\n\n  <ion-list>\n\n\n\n\n\n\n\n    <ion-list-header>Yesterday</ion-list-header>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-5.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Hamm</h2>\n\n\n\n      <p>You heard of Kung Fu? Well get ready for pork chop.</p>\n\n\n\n      <ion-note item-end>11:11 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-2.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Slinky Dog</h2>\n\n\n\n      <p>I may not be a smart dog, but I know what roadkill is.</p>\n\n\n\n      <ion-note item-end>8:54 pm</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-4.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Rex</h2>\n\n\n\n      <p>Were you scared? Tell me honestly.</p>\n\n\n\n      <ion-note item-end>7:22 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-3.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Bullseye</h2>\n\n\n\n      <p>Neigh!</p>\n\n\n\n      <ion-note item-end>2:08 am</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n  </ion-list>\n\n\n\n\n\n\n\n  <ion-list>\n\n\n\n\n\n\n\n    <ion-list-header>Last Week</ion-list-header>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-2.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Barbie</h2>\n\n\n\n      <p>So, who\'s ready for Ken\'s dream tour?</p>\n\n\n\n      <ion-note item-end>Sun</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/imgs/head-img-6.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Squeeze</h2>\n\n\n\n      <p>The claw is our master.</p>\n\n\n\n      <ion-note item-end>Fri</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img class="list-head-img" src="assets/imgs/head-img-5.jpeg">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Sarge</h2>\n\n\n\n      <p>Code Red, repeat: We\'re at Code Red!</p>\n\n\n\n      <ion-note item-end>Wed</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n    <ion-item>\n\n\n\n      <ion-avatar item-start>\n\n\n\n        <img src="assets/img/avatar-ts-bopeep.png">\n\n\n\n      </ion-avatar>\n\n\n\n      <h2>Bo Peep</h2>\n\n\n\n      <p>What would you say if I get someone else to watch the sheep for me tonight?</p>\n\n\n\n      <ion-note item-end>Mon</ion-note>\n\n\n\n    </ion-item>\n\n\n\n\n\n\n\n  </ion-list> -->\n\n\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\list\friend.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__friend_service__["a" /* FriendObjService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__friend_service__["a" /* FriendObjService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_3__pluginroot_pluginroot_date_service__["a" /* PluginDateService */]])
     ], FriendList);
     return FriendList;
 }());
@@ -492,7 +572,7 @@ var FriendList = (function () {
 
 /***/ }),
 
-/***/ 203:
+/***/ 204:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -614,7 +694,7 @@ var FriendObjService = (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -645,7 +725,7 @@ var PluginHomePage = (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -679,13 +759,13 @@ var AlertServices = (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(231);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -693,23 +773,23 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 230:
+/***/ 231:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(273);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_pluginroot_pluginroot_module__ = __webpack_require__(282);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_alerticon_alert_icon_module__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_pluginroot_pluginroot_module__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_alerticon_alert_icon_module__ = __webpack_require__(286);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -770,16 +850,16 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 273:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(196);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -828,28 +908,30 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 282:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PluginModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__implugin_im_area_component__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__implugin_im_area_service__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pluginroot_component__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__plugintabs_plugintabs_component__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_friend__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__implugin_im_area_directive__ = __webpack_require__(283);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__login_loginpage_component__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__list_friend_service__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pluginhome_pluginhome_component__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__implugin_im_area_component__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__implugin_im_area_service__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pluginroot_component__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__plugintabs_plugintabs_component__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list_friend__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__implugin_im_area_directive__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__login_loginpage_component__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__list_friend_service__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pluginhome_pluginhome_component__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pluginroot_date_service__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -888,7 +970,8 @@ var PluginModule = (function () {
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_3__implugin_im_area_service__["a" /* ImAreaService */],
-                __WEBPACK_IMPORTED_MODULE_9__list_friend_service__["a" /* FriendObjService */]
+                __WEBPACK_IMPORTED_MODULE_9__list_friend_service__["a" /* FriendObjService */],
+                __WEBPACK_IMPORTED_MODULE_11__pluginroot_date_service__["a" /* PluginDateService */]
             ]
         })
     ], PluginModule);
@@ -899,7 +982,7 @@ var PluginModule = (function () {
 
 /***/ }),
 
-/***/ 283:
+/***/ 284:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -944,14 +1027,14 @@ var HighlightDirective = (function () {
 
 /***/ }),
 
-/***/ 284:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__plugintabs_plugintabs_component__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__plugintabs_plugintabs_component__ = __webpack_require__(100);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -985,14 +1068,14 @@ var LoginPage = (function () {
 
 /***/ }),
 
-/***/ 285:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertAreaModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__alert_icon_component__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__alert_icon_services__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__alert_icon_component__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__alert_icon_services__ = __webpack_require__(206);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1026,15 +1109,15 @@ var AlertAreaModule = (function () {
 
 /***/ }),
 
-/***/ 286:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertArea; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pluginroot_pluginroot_component__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__alert_icon_services__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pluginroot_pluginroot_component__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__alert_icon_services__ = __webpack_require__(206);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1076,12 +1159,8 @@ var AlertArea = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PluginDateService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__implugin_im_area_component__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_friend__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pluginhome_pluginhome_component__ = __webpack_require__(204);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1092,29 +1171,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
-
-
-var TabsPage = (function () {
-    function TabsPage(navParams) {
-        this.navParams = navParams;
-        this.talkArea = __WEBPACK_IMPORTED_MODULE_1__implugin_im_area_component__["a" /* ImArea */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__list_friend__["a" /* FriendList */];
-        this.tabHomePage = __WEBPACK_IMPORTED_MODULE_4__pluginhome_pluginhome_component__["a" /* PluginHomePage */];
-        this.tabsParams = navParams;
+var PluginDateService = (function () {
+    function PluginDateService() {
     }
-    TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"c:\angular4\IM_IonicClient\src\pages\plugintabs\plugintabs.html"*/'<ion-tabs class="im-tabs-style" [color]="royal">\n  <ion-tab [root]="tabHomePage"tabIcon="home" [rootParams]="tabsParams"></ion-tab>\n  <ion-tab [root]="tab3Root" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams"></ion-tab>\n  <ion-tab [root]="talkArea" tabBadge="3" tabIcon="chatbubbles" tabBadgeStyle="danger" [rootParams]="tabsParams"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"c:\angular4\IM_IonicClient\src\pages\plugintabs\plugintabs.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* NavParams */]])
-    ], TabsPage);
-    return TabsPage;
+    PluginDateService.prototype.getTalkingPersion = function () {
+        return this.talkingFriend;
+    };
+    PluginDateService.prototype.setTalkingPersion = function (friendSelect) {
+        this.talkingFriend = friendSelect;
+    };
+    PluginDateService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], PluginDateService);
+    return PluginDateService;
 }());
 
-//# sourceMappingURL=plugintabs.component.js.map
+//# sourceMappingURL=pluginroot.date.service.js.map
 
 /***/ })
 
-},[206]);
+},[207]);
 //# sourceMappingURL=main.js.map

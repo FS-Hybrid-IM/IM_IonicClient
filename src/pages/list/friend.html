@@ -14,7 +14,7 @@
 
   <ion-list *ngFor="let talkingList of talkingLists">
       <ion-list-header>{{talkingList.headText}}</ion-list-header>
-      <ion-item *ngFor="let talkingFriend of talkingList.talkingFriends">
+      <ion-item *ngFor="let talkingFriend of talkingList.talkingFriends" (click)="toTalk(talkingFriend)">
         <ion-avatar item-start>
           <img src="{{talkingFriend.headImg}}" tabBadge="3">
         </ion-avatar>
