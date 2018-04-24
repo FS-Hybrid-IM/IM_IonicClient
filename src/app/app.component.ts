@@ -23,14 +23,15 @@ export class MyApp {
         console.log("Init initPlatform Start!!");
         marsChat.initPlatform({
           'userName': 'Marven',
-          'host': '10.204.13.145'
+          'host': '10.204.13.145',
+          'deviceId': '123456789012345678901234'
         }, function () {
           console.log("MarsPlatform ==>  Init Success !");
         });
       } catch (error) {
         console.log("Oooops MarsPlatform ==> Init error !" + error);
       }
-  
+
       });
   }
 }
